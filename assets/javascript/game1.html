@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+
+
+<h1>Tech Psychic Game</h1>
+
+
+	<p>Try to guess what letter the computer will generate! You have 10 guesses, good luck!</p>
+
+	<p> Matches:</p> <p id="matches">0</p>
+
+	<p> Misses:</p> <p id="unmatch">0</p>
+
+	<p> Total Guesses:</p> <p id="guesses">0</p>
+
+	<p> Guesses Left: </p> <p id="guessesleft">10</p>
+
+	<p> Letters Guessed: </p> <p id="letters"></p>
+
+
+	<script type="text/javascript">
+
+	var options = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"];
+
+	var matches = 0;
+
+	var unmatch = 0;
+
+	var guesses = 0;
+
+	var guessesleft = 10;
+	//Random  number
+
+	var computerGuess = options[Math.floor(Math.random()*options.length)];
+
+
+		console.log(computerGuess);
+
+
+	document.onkeyup = function() {
+
+			var userguess = String.fromCharCode(event.keyCode).
+
+				toLowerCase();
+
+				var letters =document.getElementById("letters").innerHTML;
+
+			document.getElementById("letters").innerHTML = userguess + ", " + letters;
+
+
+	
+
+
+	if (guessesleft==0) {alert("Game over!"); window.location.reload();}
+	
+
+		// EQUAL
+
+	if ((userguess==computerGuess)) {
+
+			matches++;
+
+			guesses++;
+			guessesleft--;
+
+			document.getElementById("matches").innerHTML = matches;
+			document.getElementById("guesses").innerHTML = guesses;
+			document.getElementById("guessesleft").innerHTML = guessesleft;
+			alert("Congrats, you've won!");
+			location.reload();
+		}
+
+		// EQUAL
+
+
+		// NOT EQUAL
+	if ((userguess!==computerGuess)) {
+
+			unmatch++;
+
+			guesses++;
+
+			guessesleft--;
+			document.getElementById("unmatch").innerHTML = unmatch;
+			document.getElementById("guesses").innerHTML = guesses;
+			document.getElementById("guessesleft").innerHTML = guessesleft;
+
+		}
+
+		// NOT EQUAL
+
+		}
+
+		
+
+	</script>
+
+
+
+
+
+
+</body>
+
+</html>
+
