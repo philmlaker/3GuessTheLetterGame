@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 
-	<link rel="stylesheet" href="assets/reset.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Raleway|Ribeye" rel="stylesheet">
 
 <html>
 
 <body>
 
+<div id="header">
+	<img src="assets/images/birdtattoo.png">
+	<h1>Guess the Letter</h1>
+	<img src="assets/images/rosetattoo.png">
+</div>
 
+	<p id="instructions">Try to guess what letter the computer will generate by pressing letters on the keyboard! You have 10 guesses. GOOD LUCK!</p>
 
-<h1>Tech Psychic Game</h1>
+	<div id="score">
 
+	<p class="header"> Matches:</p> <p id="matches">0</p>
 
-	<p>Try to guess what letter the computer will generate! You have 10 guesses, good luck!</p>
+	<p class="header"> Misses:</p> <p id="unmatch">0</p>
 
-	<p> Matches:</p> <p id="matches">0</p>
+	<p class="header"> Total Guesses:</p> <p id="guesses">0</p>
 
-	<p> Misses:</p> <p id="unmatch">0</p>
+	<p class="header"> Guesses Left: </p> <p id="guessesleft">10</p>
 
-	<p> Total Guesses:</p> <p id="guesses">0</p>
-
-	<p> Guesses Left: </p> <p id="guessesleft">10</p>
-
-	<p> Letters Guessed: </p> <p id="letters"></p>
-
+	<p class="header"> Letters Guessed: </p> <p id="letters"></p>
+</div>
 
 	<script type="text/javascript">
 
